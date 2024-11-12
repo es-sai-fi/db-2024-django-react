@@ -1,11 +1,11 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 
-from .models import Manufacturer
+from .models import OrderItem
 from .serializer import CustomerSerializer
 
-class ListCreateManufacturers(generics.ListAPIView):
-  queryset = Manufacturer.objects.all()
+class ListCreateOrderItems(generics.ListAPIView):
+  queryset = OrderItem.objects.all()
   serializer_class = CustomerSerializer
   
   def post(self, request, *args, **kwargs):

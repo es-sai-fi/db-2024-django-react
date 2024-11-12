@@ -4,7 +4,7 @@ from django.urls import re_path
 from .views import *
 
 urlpatterns = [
-  re_path(r'$', ListCreateClients.as_view(), name='create-list-clients')
+  re_path(r'$', ListCreateOrders.as_view(), name='create-list-orders')
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
